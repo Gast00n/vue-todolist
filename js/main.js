@@ -12,6 +12,7 @@ var app = new Vue({
     data: {
       listIndex: 'none',  
       icon: 'fas fa-check-circle',
+      nuova: '',
       todos: [{
           nome: 'Fare la spesa',
           done: 'pizza'},
@@ -26,6 +27,13 @@ var app = new Vue({
           done: ''}]
     },
     methods: {
+        uploadTask() {
+            this.todos.push({
+                nome: this.nuova,
+                done: ''
+              })
+            this.nuova = ''
+        },
 
         setDone(index) {
             if (this.listIndex == index) {

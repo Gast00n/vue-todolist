@@ -23,8 +23,8 @@
                 <p>A simple app to get rid of daily tasks</p>
             </div>
             <div class="input">
-                <input type="text" id="new-task">
-                <button><i class="fas fa-plus"></i></button>
+                <input @keyup.enter="uploadTask" v-model="nuova" type="text" id="new-task">
+                <button @click="uploadTask" ><i class="fas fa-plus"></i></button>
             </div>
         </section>
 
