@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue To Do List</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css'/>
+    <!-- Josephin for titles -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+    <!-- Lato for textes -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- INCLUDE VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <!-- Sezione Titolo + Inserimento -->
+        <section class="left-side">
+            <div class="title">
+                <h1>vue<small>.dos</small></h1>
+                <p>A simple app to get rid of daily tasks</p>
+            </div>
+            <div class="input">
+                <input type="text" id="new-task">
+                <button><i class="fas fa-plus"></i></button>
+            </div>
+        </section>
+
+        <!-- Sezione Lista -->
+        <section class="right-side">
+            <ul class="task-list">
+                <li>
+                    <i class="far fa-check-circle"></i> <span>Fare la spesa</span> <i class="fas fa-eraser red"></i>
+                </li>
+                <li>
+                    <i class="far fa-check-circle"></i> <span>Fare la spesa</span> <i class="fas fa-eraser red"></i>
+                </li>
+                <li>
+                    <i class="far fa-check-circle"></i> <span>Fare la spesa</span> <i class="fas fa-eraser red"></i>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- INCLUDE JS -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
