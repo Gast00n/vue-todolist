@@ -13,6 +13,7 @@ var app = new Vue({
       listIndex: 'none',  
       icon: 'fas fa-check-circle',
       nuova: '',
+      mexEm: 'Non ci sono Task da fare, aggiungine di nuove!',
       todos: [{
           nome: 'Fare la spesa',
           done: 'pizza'},
@@ -36,8 +37,7 @@ var app = new Vue({
         },
 
         deleteTask(index) {
-            console.log(index);
-                this.todos.splice(index, 1);
+            this.todos.splice(index, 1);
         },
 
         setDone(index) {
@@ -48,7 +48,6 @@ var app = new Vue({
                 this.listIndex = index;
                 this.todos[index].done = 'fatto';
             }
-            console.log(this.todos[index].done);
        }
     }
 });
