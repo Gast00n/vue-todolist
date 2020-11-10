@@ -13,7 +13,6 @@ var app = new Vue({
       listIndex: 'none',  
       icon: 'fas fa-check-circle',
       nuova: '',
-      mexEm: 'Non ci sono Task da fare, aggiungine di nuove!',
       todos: [{
           nome: 'Fare la spesa',
           done: 'pizza'},

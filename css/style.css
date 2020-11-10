@@ -107,6 +107,16 @@ h1 {
     list-style: none;
 }
 
+.right-side p {
+    display: block;
+    width: 100%;
+    background: #3d405b;
+    border-radius: 5px;
+    padding: 20px 10px;
+    font-size: 20px;
+    color: #e07a5f;
+}
+
 .right-side ul li {
     padding: 5px;
     width: 100%;
