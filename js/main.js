@@ -10,7 +10,31 @@
 var app = new Vue({
     el: '#app',
     data: {
-      icon: 'fa-check-circle',
-      todos: ['Fare la spesa', 'Comprare il pane', 'Far uscire il cane', 'Passare lo straccio']
+      listIndex: 'none',  
+      icon: 'fas fa-check-circle',
+      todos: [{
+          nome: 'Fare la spesa',
+          done: 'pizza'},
+      {
+          nome: 'Comprare la pasta',
+          done: ''},
+      {
+          nome: 'Pulire casa',
+          done: ''},
+      {
+          nome: 'Portare a spasso il cane',
+          done: ''}]
+    },
+    methods: {
+
+        setDone(index) {
+            if (this.listIndex == index) {
+                this.todos[index].done = '';
+            } else {
+                this.listIndex = index;
+                this.todos[index].done = 'fatto';
+            }
+            console.log(this.todos[index].done);
+       }
     }
 });

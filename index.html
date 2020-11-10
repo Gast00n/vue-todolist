@@ -31,7 +31,7 @@
         <!-- Sezione Lista -->
         <section class="right-side">
             <ul class="task-list">
-                <li v-for="todo in todos"><i class="far" :class="icon"></i> <span>{{ todo }}</span> <i class="fas fa-eraser red"></i></li>
+                <li v-for="(todo, index) in todos" @click="setDone(index)"><i :class="todos[index].done == 'fatto' ? 'fas fa-check-circle green' : 'fas fa-check-circle'"></i> <span>{{ todo.nome }}</span> <i class="fas fa-eraser red"></i></li>
             </ul>
         </section>
     </div>
