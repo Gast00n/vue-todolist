@@ -31,15 +31,7 @@
         <!-- Sezione Lista -->
         <section class="right-side">
             <ul class="task-list">
-                <li>
-                    <i class="far fa-check-circle"></i> <span>Fare la spesa</span> <i class="fas fa-eraser red"></i>
-                </li>
-                <li>
-                    <i class="far fa-check-circle"></i> <span>Fare la spesa</span> <i class="fas fa-eraser red"></i>
-                </li>
-                <li>
-                    <i class="far fa-check-circle"></i> <span>Fare la spesa</span> <i class="fas fa-eraser red"></i>
-                </li>
+                <li v-for="todo in todos"><i class="far" :class="icon"></i> <span>{{ todo }}</span> <i class="fas fa-eraser red"></i></li>
             </ul>
         </section>
     </div>

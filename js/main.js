@@ -7,3 +7,10 @@
  * 
  */
 
+var app = new Vue({
+    el: '#app',
+    data: {
+      icon: 'fa-check-circle',
+      todos: ['Fare la spesa', 'Comprare il pane', 'Far uscire il cane', 'Passare lo straccio']
+    }
+});
