@@ -35,8 +35,14 @@ var app = new Vue({
             this.nuova = ''
         },
 
+        deleteTask(index) {
+            console.log(index);
+                this.todos.splice(index, 1);
+        },
+
         setDone(index) {
-            if (this.listIndex == index) {
+            if (this.todos[index].done == 'fatto') {
+                this.listIndex = 'none';
                 this.todos[index].done = '';
             } else {
                 this.listIndex = index;
