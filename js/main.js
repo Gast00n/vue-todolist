@@ -15,7 +15,7 @@ var app = new Vue({
       nuova: '',
       todos: [{
           nome: 'Fare la spesa',
-          done: 'pizza'},
+          done: ''},
       {
           nome: 'Comprare la pasta',
           done: ''},
@@ -32,7 +32,7 @@ var app = new Vue({
                 nome: this.nuova,
                 done: ''
               })
-            this.nuova = ''
+            this.nuova = '';
         },
 
         deleteTask(index) {
