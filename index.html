@@ -22,6 +22,9 @@
                 <h1>vue<small>.dos</small></h1>
                 <p>A simple app to get rid of daily tasks</p>
             </div>
+            <div class="day-class">
+                <h3 class="today"><span class="red">{{numToday}}</span> {{numMonth}}<small style="weekDay"> {{numDay}}</small></h3>
+            </div>
             <div class="input">
                 <input @keyup.enter="uploadTask" v-model="nuova" type="text" id="new-task">
                 <button @click="uploadTask" ><i class="fas fa-plus"></i></button>
@@ -32,7 +35,7 @@
         <section class="right-side">
             <p v-if="todos.length === 0">Non ci sono più Tasks da eseguire, aggiungine altre!</p>
             <ul class="task-list">
-                <li v-for="(todo, index) in todos"><span  @click="setDone(index)"><i :class="todos[index].done == 'fatto' ? 'fas fa-check-circle green' : 'fas fa-check-circle'"></i> {{ todo.nome }}</span> <i class="fas fa-eraser red" @click="deleteTask(index)"></i></li>
+                <li v-for="(todo, index) in todos" :class="todos[index].done == 'fatto' ? 'grey' : ''"><span  @click="setDone(index)"><i :class="todos[index].done == 'fatto' ? 'fas fa-check-circle green' : 'fas fa-check-circle'"></i> {{ todo.nome }}</span> <i class="fas fa-eraser red" @click="deleteTask(index)"></i></li>
             </ul> 
         </section>
     </div>
