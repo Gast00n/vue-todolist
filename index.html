@@ -33,10 +33,10 @@
 
         <!-- Sezione Lista -->
         <section class="right-side">
-            <p v-if="todos.length === 0">Non ci sono più Tasks da eseguire, aggiungine altre!</p>
-            <ul class="task-list">
+            <ul v-if="todos.length > 0" class="task-list">
                 <li v-for="(todo, index) in todos" :class="todos[index].done == 'fatto' ? 'grey' : ''"><span  @click="setDone(index)"><i :class="todos[index].done == 'fatto' ? 'fas fa-check-circle green' : 'fas fa-check-circle'"></i> {{ todo.nome }}</span> <i class="fas fa-eraser red" @click="deleteTask(index)"></i></li>
             </ul> 
+            <p v-else>Non ci sono più Tasks da eseguire, aggiungine altre!</p>
         </section>
     </div>
 
